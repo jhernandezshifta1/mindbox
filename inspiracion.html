@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindbox</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <!--HEADER-->
+    <header>
+      <div class="menu content">
+        <!--LOGO-->
+        <a href="index.html" class="logo"><img src="images/logo-mind-box.svg" alt="Mindbox" /></a>
+
+        <!--MAIN MENU -  usando la etiqueta nav -->
+        <nav class="main-menu">
+          <!--LISTA MENU-->
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Tareas</a></li>
+            <li><a href="notas.html">Notas</a></li>
+            <li><a class="active" href="inspiracion.html">Inspiración</a></li>
+            <li><a href="#">Configuración</a></li>
+          </ul>
+        </nav>
+        <!--SETTINGS (íconos y avatar)-->
+        <nav class="settings">
+          <a href="#"><span class="material-symbols-outlined"> search </span></a>
+          <a href="#"><span class="material-symbols-outlined"> notifications </span></a>
+          <a href="#"><span class="material-symbols-outlined"> settings_heart </span></a>
+          <a href="#"><span class="material-symbols-outlined"> person </span></a>
+          <!--Avatar de usuario-->
+          <!--El atributo alt es importante para la accesibilidad y SEO, describe la imagen-->
+          <span class="user-img">
+            <img src="images/user.jpg" alt="user" />
+          </span>
+        </nav>
+      </div>
+    </header>
+    <!--Uso de la etiqueta main, sirve para encerrar el contenido principal de tu página. Es clave para accesibilidad, SEO-->
+
+    <main>
+ <!--FORMULARIO-->
+      <section class="inspiration-add content">
+        <h2>Añadir una inspiración</h2>
+        <!--form-->
+        <!--METODO POST: se utiliza para enviar datos al servidor y esos datos no son visibles en la URL-->
+        <form class="inspiration-form" action="" method="post">
+        <!--LABEL: se usa para asociar texto descriptivo con elementos de formulario, como campos de entradas-->
+          <label for="name">Título</label>
+        <!--INPUT: define campos de entrada en formularios y se utiliza con diferentes tipos para manejar distintos tipos de datos-->  
+          <input type="text" name="inspiration" id="inspiration" placeholder="Escribe el sitio..." required />
+        </form>
+        <form class="inspiration-form" action="" method="post">
+          <label for="description">Comentario</label>
+        <!--TEXTAREA: es un elemento de formulario que permite a los usuarios ingresar texto de varias líneas-->  
+          <textarea name="description" id="description" placeholder="Escribe un texto que te inspire..." required></textarea>
+        </form>
+        <button type="submit">Guardar</button>
+      </section>
+
+      <!--SECCIÓN ÚLTIMAS INSPIRACIONES-->
+      <!--content para alinear el contenido-->
+      <section class="inspiration content">
+        <h2>Últimas inspiraciones</h2>
+        <div>
+          <!--Grupo de cards-->
+          <!--contenido card-1-->
+          <article class="card">
+            <img src="images/colpatria.jpg" alt="torre colpatria" />
+            <div class="info">
+              <div class="txt">
+                <h3>Título de la inspiración 1</h3>
+                <span class="date">01/01/25 </span>
+                <p>Resumen de la inspiración 1</p>
+              </div>
+              <a class="button" href="#" aria-label="Ver más sobre la inspiración 1">
+                <img src="images/icon-moreview.svg" alt="" />
+              </a>
+            </div>
+          </article>
+          <!--contenido card-2-->
+          <article class="card">
+            <img src="images/salsa.jpg" alt="Cali salsa" />
+            <div class="info">
+              <div class="txt">
+                <h3>Título de la inspiración 2</h3>
+                <span class="date">02/01/25 </span>
+                <p>Resumen de la inspiración 2</p>
+              </div>
+              <a class="button" href="#" aria-label="Ver más sobre la inspiración 2">
+                <img src="images/icon-moreview.svg" alt="" />
+              </a>
+            </div>
+          </article>
+          <!--contenido card-3-->
+          <article class="card">
+            <img src="images/fashion.jpg" alt="torre colpatria" />
+            <div class="info">
+              <div class="txt">
+                <h3>Título de la inspiración 3</h3>
+                <span class="date">03/01/25 </span>
+                <p>Resumen de la inspiración 3</p>
+              </div>
+              <a class="button" href="#" aria-label="Ver más sobre la inspiración 3">
+                <img src="images/icon-moreview.svg" alt="" />
+              </a>
+            </div>
+          </article>
+          <!--contenido card-4-->
+          <article class="card">
+            <img src="images/teatro-cartagena.jpg" alt="Cali salsa" />
+            <div class="info">
+              <div class="txt">
+                <h3>Título de la inspiración 4</h3>
+                <span class="date">04/01/25 </span>
+                <p>Resumen de la inspiración 4</p>
+              </div>
+              <a class="button" href="#" aria-label="Ver más sobre la inspiración 4">
+                <img src="images/icon-moreview.svg" alt="" />
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!--ETIQUETA FOOTER-->
+      <footer>
+        <span><strong>© 2025 Mindbox. </strong>Todos los derechos reservados</span>
+      </footer>
+    </main>
+  </body>
+</html>

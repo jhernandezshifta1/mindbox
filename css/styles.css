@@ -1,0 +1,426 @@
+/* Comodín que formatea estilos del sitio */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* :root - Define variables globales de CSS */
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray: #f6f6f6;
+  --gray-light: #fdfdfd;
+  --gray-dark: #1e1e1e;
+  --green-white: #e5efe5;
+  --green-light: #bbfebf;
+  --green-dark: #041d17;
+  --pink-light: #fbf4ff;
+  --pink: #d094f9;
+  --violet: #581c7d;
+}
+/* body - Define variables globales del contenido visible */
+/* Fuente tipográfica Hind de Google Fonts */
+body {
+  font-family: "Hind", sans-serif !important;
+  background-color: var(--gray-light);
+  display: block;
+  margin: 0 auto;
+}
+/* img - Define propiedade de las imágenes */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* formateo estilos de los textos */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define las propiedades para los íconos*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+/* Propiedades header */
+header {
+  background-color: var(--green-dark);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0.188rem 3.125rem var(--gray-light);
+  z-index: 1000;
+}
+/* Propiedades content */
+.content {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+/* MENU */
+header .menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .menu .main-menu {
+  display: flex;
+  align-items: center;
+}
+/* NAV MENU LISTA */
+header nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--green-light);
+  font-size: 1.125rem;
+}
+
+header nav ul li a:hover {
+  color: var(--white);
+}
+
+header nav ul li a.active {
+  color: var(--pink);
+  border-bottom: 1px solid var(--pink);
+  font-weight: 700;
+}
+
+/* SETTINGS (íconos y avatar) */
+header .settings {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+header .settings a {
+  display: inline-block;
+  color: var(--pink);
+  text-decoration: none;
+}
+
+header .settings a:hover {
+  color: var(--white);
+}
+
+header .settings img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: initial;
+  cursor: pointer;
+}
+
+header .settings img:hover {
+  opacity: 0.8;
+}
+
+.dashboard div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+section h2 {
+  font-size: 1.875rem;
+  color: var(--gray-dark);
+  margin-bottom: 1.25rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  padding-top: 3.125rem;
+}
+
+/* Definir propiedades de las cajas */
+
+.box {
+  width: calc(50% - 1rem); /* Dos cajas por fila, restando el gap */
+  box-sizing: border-box;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background: var(--green-white);
+  box-shadow: 0 0.25rem 0.625rem 0 rgba(136, 136, 136, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.box h3 {
+  font-size: 1.5rem;
+  color: var(--green-dark);
+}
+
+button,
+.button {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: var(--green-dark);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 0.313rem;
+}
+
+.box a:hover {
+  background-color: #581c7d;
+}
+
+.inspiration div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Definir propiedades de las cards */
+
+.card img {
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.card img:hover {
+  opacity: 0.8;
+}
+
+.card .info {
+  display: flex;
+  padding: 1.25rem;
+  border-radius: 0 0 1.25rem 1.25rem;
+  background: var(--green-dark);
+  color: var(--white);
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.card .info .txt {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.card .info .txt h3 {
+  color: var(--green-light);
+  font-size: 1.563rem;
+  font-weight: 700;
+}
+
+.card .info .txt .date {
+  font-size: 0.875rem;
+  color: var(--white);
+}
+
+.card .info .txt p {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.card .info a img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.card .info .button {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Definir propiedades del footer */
+footer {
+  background-color: var(--violet);
+  padding: 1.875rem 0;
+  text-align: center;
+}
+
+footer span {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+/* Inspiración Formulario */
+.inspiration-add {
+  width: 100%;
+  padding: 3.125rem;
+  background: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  button {
+    background-color: var(--violet);
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+  }
+}
+.inspiration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inspiration-form label {
+  font-size: 1.125rem;
+  color: var(--gray-dark);
+}
+input[type="text"],
+textarea {
+  border: 1px solid var(--gray-dark);
+  border-radius: 0.313rem;
+  padding: 0.625rem;
+  font-size: 1rem;
+  width: 100%;
+}
+textarea {
+  height: 12.5rem;
+  resize: none;
+}
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--pink);
+}
+/* ---------------------------------1ra entrega CSS AVANZADO--------------------------------------------------*/
+/* Sección Notas */
+/* Construcción con grid, diseño de cuadricula con dos columnas */
+.notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.125rem;
+}
+/* Construcción con grid, diseño de cuadricula con dos columnas */
+.notes .card-w {
+  background: var(--gray);
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  display: grid;
+  gap: 2rem;
+  /* Estilo adaptativo usando font-weight para que la tipografía se vea bold, además de letter-spacing para dar altura al texto */
+  /* Uso de display flex para organizar los textos de manera uniforme con gap */
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.7;
+    display: flex;
+    gap: 1rem;
+    letter-spacing: 4px;
+    padding-top: 15px;
+  }
+  /* Uso de de pseudo elementos, para poner contenido antes y despúes de un elemento */
+  h1::after,
+  h1::before {
+    content: "";
+    border-left: 3px solid var(--violet);
+    transform: skew(25deg);
+  }
+  .button {
+    background: var(--violet);
+    text-align: center;
+  }
+
+  /* Uso de de pseudo clase, para poner marcar clases en este caso un botón */
+  .button:hover {
+    background: var(--green-dark);
+  }
+  /* Para esta caja use grid template areas, un que se puede desarrollar de una manera
+  más sencilla la distribución de los elementos, quize utilizarla para practicar lo visto en clases */
+  grid-template-areas:
+    "first first"
+    "second second"
+    "third fourth"
+    "fifth fifth";
+}
+
+.notes h1 {
+  grid-area: first;
+}
+.notes .text-box {
+  grid-area: second;
+}
+.notes .box-w {
+  grid-area: third;
+}
+.notes .box-wh {
+  grid-area: fourth;
+}
+.notes .button {
+  grid-area: fifth;
+}
+
+.notes .box-w,
+.box-wh {
+  background: var(--green-dark);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  .number,
+  p {
+    color: var(--green-light);
+  }
+  .number {
+    font-size: 2.813rem;
+    font-weight: 600;
+  }
+}
+/* Uso de de pseudo clase, para poner marcar clases en este caso un botón */
+.box-w,
+.box-wh:hover {
+  background: var(--violet);
+  cursor: pointer;
+}
+
+.notes .card .info {
+  align-items: center;
+  border: none;
+}
+
+/* Sección Información cajas*/
+.info-boxes {
+  display: flex;
+  gap: 3.125rem;
+  /* flex-grow, determinó que tanto debierón crecer las cajas*/
+  .box-notes {
+    flex-grow: 1;
+    background: var(--pink-light);
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    h2 {
+      font-weight: 700;
+    }
+    /* Uso de de pseudo elementos, para poner un simbolo y despúes de un elemento*/
+    h2::after {
+      content: " ➥";
+    }
+  }
+  /* Uso de de pseudo clase nth-child, para poder aplicar estilos solamente al segundo hijo del
+  contenido de 3 cajas */
+  .box-notes:nth-child(2) {
+    background: var(--green-white);
+    justify-content: flex-end;
+  }
+  .button {
+    text-align: center;
+  }
+  .button:hover {
+    background: var(--violet);
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindbox</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!--HEADER-->
+    <header>
+      <div class="menu content">
+        <!--LOGO-->
+        <a href="index.html" class="logo"><img src="images/logo-mind-box.svg" alt="Mindbox" /></a>
+
+        <!--MAIN MENU -  usando la etiqueta nav -->
+        <nav class="main-menu">
+          <!--LISTA MENU-->
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Tareas</a></li>
+            <li><a class="active" href="notas.html">Notas</a></li>
+            <li><a href="inspiracion.html">Inspiración</a></li>
+            <li><a href="#">Configuración</a></li>
+          </ul>
+        </nav>
+        <!--SETTINGS (íconos y avatar)-->
+        <nav class="settings">
+          <a href="#"><span class="material-symbols-outlined"> search </span></a>
+          <a href="#"><span class="material-symbols-outlined"> notifications </span></a>
+          <a href="#"><span class="material-symbols-outlined"> settings_heart </span></a>
+          <a href="#"><span class="material-symbols-outlined"> person </span></a>
+          <!--Avatar de usuario-->
+          <!--El atributo alt es importante para la accesibilidad y SEO, describe la imagen-->
+          <span class="user-img">
+            <img src="images/user.jpg" alt="user" />
+          </span>
+        </nav>
+      </div>
+    </header>
+    <!--Uso de la etiqueta main, sirve para encerrar el contenido principal de tu página. Es clave para accesibilidad, SEO-->
+
+    <main>
+      <!--cards informativas-->
+      <section class="notes content">
+        <article class="card-w">
+          <h1>Notas</h1>
+          <div class="text-box">herramienta digital diseñada para facilitar el registro, seguimiento y gestión del rendimiento académico de los estudiantes.</div>
+          <div class="box-w">
+            <div class="number">+20</div>
+            <p>Propuestas</p>
+          </div>
+          <div class="box-wh">
+            <div class="number">+100</div>
+            <p>Ideas</p>
+          </div>
+          <a class="button" href="#">Conocer proyecto</a>
+        </article>
+        <article class="card">
+          <img src="images/study.jpg" alt="torre colpatria" />
+          <div class="info">
+            <p>Resumen de la inspiración 3</p>
+            <a class="button" href="#" aria-label="Ver más sobre la inspiración 3">
+              <img src="images/icon-moreview.svg" alt="" />
+            </a>
+          </div>
+        </article>
+      </section>
+      <!--cajas informativas-->
+      <section class="info-boxes content">
+        <article class="box-notes">
+          <img src="images/books.png" alt="books" />
+          <h2>Ponderación</h2>
+          <p>Cuando seleccionas los materiales de tu curso, siempre suponemos que todos tienen el mismo valor, pero es algo que puedes ajustar.</p>
+          <a class="button" href="#">Ver más</a>
+        </article>
+        <article class="box-notes">
+          <img src="images/coding.png" alt="books" />
+          <h2>Calificación</h2>
+          <p>Las calificaciones se expresan típicamente en una escala numérica, aunque algunas instituciones también utilizan letras.</p>
+          <a class="button" href="#">Ver más</a>
+        </article>
+        <article class="box-notes">
+          <img src="images/computer.png" alt="books" />
+          <h2>Retroalimentación</h2>
+          <p>Es el proceso de proporcionar información a un estudiante sobre su desempeño, con el objetivo de ayudarle a mejorar su aprendizaje.</p>
+          <a class="button" href="#">Ver más</a>
+        </article>
+      </section>
+      <!--Información usando boostrap, framework con estilos ya establecidos, que nos permite
+      desarrollar contenidos más fácil y rápido-->
+      <section class="class-info content col-12">
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <h2 class="fs-4">Desarrollo front-end</h2>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+        <div class="d-flex gap-4 mt-4">
+          <ul class="list-group list-group-flush col-3 bg-success-subtle text-success-emphasis p-3">
+            <h3 class="fs-5">Información general asignatura</h3>
+            <li class="list-group-item bg-success-subtle text-success-emphasis border-bottom border-success">
+              Sala conferencia
+            </li>
+            <li class="list-group-item bg-success-subtle text-success-emphasis border-bottom border-success">
+              Item de participación
+            </li>
+            <li class="list-group-item bg-success-subtle text-success-emphasis border-bottom border-success">
+              Tarea 1
+            </li>
+            <li class="list-group-item bg-success-subtle text-success-emphasis">
+              Tarea 2
+            </li>
+          </ul>
+          <div class="d-flex gap-4">
+            <div class="card" style="max-width: 431px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="images/plan.jpg" class="img-fluid rounded-start" alt="..." />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Videoconferencias</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a natural lead-in to additional content. This
+                      content is a little bit longer.
+                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <button type="button" class="btn btn-success">Ver videos</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card" style="max-width: 431px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="images/docente.jpg" class="img-fluid rounded-start" alt="..." />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Planning</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a natural lead-in to additional content. This
+                      content is a little bit longer.
+                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <button type="button" class="btn btn-success">Ver más del plan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--ETIQUETA FOOTER-->
+      <footer>
+        <span><strong>© 2025 Mindbox. </strong>Todos los derechos reservados</span>
+      </footer>
+    </main>
+  </body>
+</html>
