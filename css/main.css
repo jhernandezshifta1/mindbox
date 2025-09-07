@@ -1,0 +1,455 @@
+@charset "UTF-8";
+/*abstracts*/
+/*Variables:para las variables en sass usamos el signo ($)*/
+/*Breackpoints*/
+/*base*/
+/* body - Define variables globales del contenido visible */
+/* Fuente tipográfica Hind de Google Fonts */
+body {
+  font-family: "Hind", sans-serif !important;
+  display: block;
+  margin: 0 auto; }
+
+/* img - Define propiedade de las imágenes */
+img {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+/* formateo estilos de los textos */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: clamp(1.5rem, 2vw, 3rem); }
+
+h2 {
+  font-size: clamp(1rem, 2vw, 1.25rem); }
+
+h3 {
+  font-size: clamp(0.8rem, 2vw, 1rem); }
+
+p {
+  font-size: clamp(0.8rem, 2vw, 1rem); }
+
+/* Comodín que formatea estilos del sitio */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Propiedades content */
+.content {
+  max-width: 75rem;
+  margin: 0 auto; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  padding-top: 3.125rem; }
+  @media (max-width: 480px) {
+    main {
+      gap: 2rem;
+      padding: 1rem; } }
+
+/*layout*/
+/* Propiedades header */
+header {
+  background-color: #041d17;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0.188rem 3.125rem #fdfdfd;
+  z-index: 1000; }
+  header .logo,
+  header .menu,
+  header .main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  header nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 1.5rem; }
+  header li a {
+    text-decoration: none;
+    color: #bbfebf;
+    font-size: 1.125rem; }
+    header li a:hover {
+      color: #fff; }
+    header li a.active {
+      color: #d094f9;
+      border-bottom: 1px solid #d094f9;
+      font-weight: 700; }
+  header .settings {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem; }
+    header .settings a {
+      display: inline-block;
+      color: #d094f9;
+      text-decoration: none; }
+      header .settings a:hover {
+        color: #fff; }
+    header .settings img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: initial;
+      cursor: pointer; }
+      header .settings img:hover {
+        opacity: 0.8; }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    padding: 1rem;
+    /*scroll horizontal*/ }
+    header .menu {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: initial; }
+    header .logo {
+      justify-content: center; }
+      header .logo img {
+        width: 60%; }
+    header .main-menu {
+      overflow: auto; }
+    header nav ul {
+      gap: 0.8rem; }
+      header nav ul li a {
+        font-size: 1rem; }
+    header .settings {
+      justify-content: center; } }
+
+/* Definir propiedades del footer */
+footer {
+  background-color: #581c7d;
+  padding: 1.875rem 0;
+  text-align: center; }
+  footer span {
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 400; }
+
+/*components*/
+.dashboard div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; }
+
+section h2 {
+  font-size: 1.875rem;
+  color: #1e1e1e;
+  margin-bottom: 1.25rem; }
+
+/* Definir propiedades de las cajas */
+.box {
+  width: calc(50% - 1rem);
+  /* Dos cajas por fila, restando el gap */
+  box-sizing: border-box;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background: #e5efe5;
+  box-shadow: 0 0.25rem 0.625rem 0 rgba(136, 136, 136, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem; }
+  .box h3 {
+    color: #041d17; }
+  .box button,
+  .box .button {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background-color: #041d17;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.313rem;
+    text-align: center;
+    /*Transición*/
+    /*Animación con keyframes*/ }
+    .box button:hover,
+    .box .button:hover {
+      transition: property duration easing-function delay; }
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%); }
+  15% {
+    transform: translateX(-25%) rotate(-5deg); }
+  30% {
+    transform: translateX(20%) rotate(3deg); }
+  45% {
+    transform: translateX(-15%) rotate(-3deg); }
+  60% {
+    transform: translateX(10%) rotate(2deg); }
+  75% {
+    transform: translateX(-5%) rotate(-1deg); } }
+
+@media (max-width: 480px) {
+  .dashboard div {
+    display: grid;
+    grid-template-columns: 1fr; }
+    .dashboard div .box {
+      width: 100%; } }
+
+.inspiration div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem; }
+
+/* Definir propiedades de las cards */
+.card img {
+  border-radius: 1.25rem 1.25rem 0 0; }
+  .card img :hover {
+    opacity: 0.8; }
+
+.card .info {
+  display: flex;
+  padding: 1.25rem;
+  border-radius: 0 0 1.25rem 1.25rem;
+  background-color: #041d17;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+  .card .info .txt {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    color: #fff; }
+    .card .info .txt h3 {
+      color: #bbfebf;
+      font-size: 1.563rem;
+      font-weight: 700; }
+    .card .info .txt .date {
+      font-size: 0.875rem;
+      color: #fff; }
+    .card .info .txt p {
+      font-size: 1.125rem;
+      font-weight: 400; }
+  .card .info .button {
+    display: flex;
+    align-items: flex-end; }
+
+@media (max-width: 480px) {
+  .inspiration div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem; }
+    .inspiration div .card h3 {
+      font-size: 1rem; } }
+
+/*----Sección Insperación Form----*/
+/* Inspiración Formulario */
+.inspiration-add {
+  width: 100%;
+  padding: 3.125rem;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+  .inspiration-add button {
+    background-color: #581c7d;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: white; }
+
+.inspiration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; }
+  .inspiration-form label {
+    font-size: 1.125rem;
+    color: #1e1e1e; }
+
+input[type="text"],
+textarea {
+  border: 1px solid #1e1e1e;
+  border-radius: 0.313rem;
+  padding: 0.625rem;
+  font-size: 1rem;
+  width: 100%; }
+  input[type="text"] textarea,
+  textarea textarea {
+    height: 12.5rem;
+    resize: none; }
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: #d094f9; }
+
+/*----Sección Notas----*/
+.notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.125rem; }
+  .notes .card-w {
+    background: #f6f6f6;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    display: grid;
+    gap: 2rem;
+    /* Estilo adaptativo usando font-weight para que la tipografía se vea bold, además de letter-spacing para dar altura al texto */
+    /* Uso de display flex para organizar los textos de manera uniforme con gap */
+    /* Uso de de pseudo elementos, para poner contenido antes y despúes de un elemento */
+    /* Para esta caja use grid template areas, un que se puede desarrollar de una manera
+  más sencilla la distribución de los elementos, quize utilizarla para practicar lo visto en clases */
+    grid-template-areas: "first first" "second second" "third fourth" "fifth fifth"; }
+    .notes .card-w h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 0.7;
+      display: flex;
+      gap: 1rem;
+      letter-spacing: 4px;
+      padding-top: 15px; }
+    .notes .card-w::after, .notes .card-w::before {
+      content: "";
+      border-left: 3px solid #581c7d;
+      transform: skew(25deg); }
+    .notes .card-w a.button {
+      display: inline-block;
+      padding: 0.625rem 1.25rem;
+      background-color: #041d17;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.313rem;
+      text-align: center;
+      /*Transición*/
+      /*Animación con keyframes*/ }
+      .notes .card-w a.button:hover {
+        transition: property duration easing-function delay; }
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%); }
+  15% {
+    transform: translateX(-25%) rotate(-5deg); }
+  30% {
+    transform: translateX(20%) rotate(3deg); }
+  45% {
+    transform: translateX(-15%) rotate(-3deg); }
+  60% {
+    transform: translateX(10%) rotate(2deg); }
+  75% {
+    transform: translateX(-5%) rotate(-1deg); } }
+
+.notes h1 {
+  grid-area: first; }
+
+.notes .text-box {
+  grid-area: second; }
+
+.notes .box-w {
+  grid-area: third; }
+
+.notes .box-wh {
+  grid-area: fourth; }
+
+.notes .button {
+  grid-area: fifth; }
+
+.notes .box-w,
+.box-wh {
+  background: #041d17;
+  padding: 1.25rem;
+  border-radius: 0.5rem; }
+  .notes .box-w .number,
+  .notes .box-w p,
+  .box-wh .number,
+  .box-wh p {
+    color: #bbfebf; }
+  .notes .box-w .number,
+  .box-wh .number {
+    font-size: 2.813rem;
+    font-weight: 600; }
+
+/* Uso de de pseudo clase, para poner marcar clases en este caso un botón */
+.box-w,
+.box-wh:hover {
+  background: #581c7d;
+  cursor: pointer; }
+
+.notes .card .info {
+  align-items: center;
+  border: none; }
+
+.card p {
+  color: #fff; }
+
+/* Sección Información cajas*/
+.info-boxes {
+  display: flex;
+  gap: 3.125rem;
+  /* flex-grow, determinó que tanto debierón crecer las cajas*/
+  /* Uso de de pseudo clase nth-child, para poder aplicar estilos solamente al segundo hijo del
+  contenido de 3 cajas */ }
+  .info-boxes .box-notes {
+    flex-grow: 1;
+    background: #fbf4ff;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* Uso de de pseudo elementos, para poner un simbolo y despúes de un elemento*/ }
+    .info-boxes .box-notes h2 {
+      font-weight: 700; }
+    .info-boxes .box-notes h2::after {
+      content: " ➥"; }
+  .info-boxes .box-notes:nth-child(2) {
+    background: #e5efe5;
+    justify-content: flex-end; }
+  .info-boxes .button {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background-color: #041d17;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.313rem;
+    text-align: center;
+    /*Transición*/
+    /*Animación con keyframes*/ }
+    .info-boxes .button:hover {
+      transition: property duration easing-function delay; }
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%); }
+  15% {
+    transform: translateX(-25%) rotate(-5deg); }
+  30% {
+    transform: translateX(20%) rotate(3deg); }
+  45% {
+    transform: translateX(-15%) rotate(-3deg); }
+  60% {
+    transform: translateX(10%) rotate(2deg); }
+  75% {
+    transform: translateX(-5%) rotate(-1deg); } }
+
+@media (max-width: 480px) {
+  .notes {
+    grid-template-columns: 1fr;
+    gap: 2rem; }
+  .info-boxes {
+    gap: 2rem;
+    flex-direction: column; }
+  .class-info {
+    display: none; } }
