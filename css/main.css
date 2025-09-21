@@ -182,7 +182,9 @@ section h2 {
     .box button:hover,
     .box .button:hover {
       transition: property duration easing-function delay; }
-
+  .wobble:hover{
+    animation: wobble 0.8s;
+  }
 @keyframes wobble {
   0%,
   100% {

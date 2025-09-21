@@ -1,15 +1,18 @@
 @mixin button {
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: $green-dark;
+  background-color: pink;
   color: $white;
   text-decoration: none;
   border-radius: 0.313rem;
   text-align: center;
 /*Transición*/
-  &:hover {
-    transition: property duration easing-function delay;
+  .button:hover {
+    transition: all 0.3s ease;
   }
+.wobble{
+  animation: wobble 0.8s;
+}
 /*Animación con keyframes*/
   @keyframes wobble {
     0%,
