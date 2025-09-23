@@ -1,0 +1,110 @@
+/* Propiedades header */
+header {
+  background-color: $green-dark;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0.188rem 3.125rem $gray-light;
+  z-index: 1000;
+
+  & .logo,
+  .menu,
+  .main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 1.5rem;
+
+  }
+
+  & li a {
+    text-decoration: none;
+    color: $green-light;
+    font-size: 1.125rem;
+
+    &:hover {
+      color: $white;
+    }
+
+    &.active {
+      color: $pink;
+      border-bottom: 1px solid $pink;
+      font-weight: 700;
+    }
+  }
+
+  & .settings {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+
+    & a {
+      display: inline-block;
+      color: $pink;
+      text-decoration: none;
+
+      &:hover {
+        color: $white;
+      }
+
+    }
+
+    & img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      vertical-align: middle;
+      display: initial;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    padding: 1rem;
+
+    & .menu {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: initial;
+    }
+
+    & .logo {
+      justify-content: center;
+
+      & img {
+        width: 60%;
+      }
+    }
+
+    /*scroll horizontal*/
+    & .main-menu {
+      overflow: auto;
+    }
+
+    & nav ul {
+      gap: 0.8rem;
+
+      & li a {
+        font-size: 1rem;
+      }
+    }
+
+    & .settings {
+      justify-content: center;
+    }
+
+  }
+}

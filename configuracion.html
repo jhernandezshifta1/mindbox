@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindbox</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <div class="menu content">
+      <!--LOGO-->
+      <a href="index.html" class="logo"><img src="images/logo-mind-box.svg" alt="Mindbox" /></a>
+
+      <!--MAIN MENU -  usando la etiqueta nav -->
+      <nav class="main-menu">
+        <!--LISTA MENU-->
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Tareas</a></li>
+          <li><a href="notas.html">Notas</a></li>
+          <li><a href="inspiracion.html">Inspiración</a></li>
+          <li><a class="active" href="configuracion.html">Configuración</a></li>
+        </ul>
+      </nav>
+      <!--SETTINGS (íconos y avatar)-->
+      <nav class="settings">
+        <a href="#"><span class="material-symbols-outlined"> search </span></a>
+        <a href="#"><span class="material-symbols-outlined"> notifications </span></a>
+        <a href="#"><span class="material-symbols-outlined"> settings_heart </span></a>
+        <a href="#"><span class="material-symbols-outlined"> person </span></a>
+        <!--Avatar de usuario-->
+        <!--El atributo alt es importante para la accesibilidad y SEO, describe la imagen-->
+        <span class="user-img">
+          <img src="images/user.jpg" alt="user" />
+        </span>
+      </nav>
+    </div>
+  </header>
+  <!--Uso de la etiqueta main, sirve para encerrar el contenido principal de tu página. Es clave para accesibilidad, SEO-->
+
+  <main>
+    <div class="inspiration-add content">
+      <h1>Configuración matricula</h1>
+      <form>
+        <h2>Conocer el valor de la matricula 2025-B</h2>
+        <input type="text" id="input-valor" placeholder="Escriba su nombre">
+        <p id="parrafo-principal"></p>
+        <button type="submit" id="mi-boton">Saber el valor</button>
+        <div id="error-message"></div>
+      </form>
+    </div>
+
+    <div class="inspiration-add content">
+      <h1>Cálculo de Matrícula con Beca</h1>
+      <p>Si el estudiante tiene 18 años o menos tentra una beca del 25%</p>
+      <label>
+        Precio base de la matrícula (€):
+        <input type="number" id="precioBase" placeholder="Ej: 700">
+      </label>
+
+      <label>
+        Edad del estudiante:
+        <input type="number" id="edad" placeholder="Ej: 17">
+      </label>
+
+      <button id="calcular">Calcular</button>
+
+      <div id="resultado"></div>
+
+    </div>
+    <!--ETIQUETA FOOTER-->
+    <footer>
+      <span><strong>© 2025 Mindbox. </strong>Todos los derechos reservados</span>
+    </footer>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
