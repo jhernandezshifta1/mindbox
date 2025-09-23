@@ -23,6 +23,20 @@
   flex-direction: column;
   gap: 1rem;
 
+  .resaltado {
+    background: #f0f8ff;
+  }
+
+  .agrandado {
+    font-size: 1.5rem;
+    color: #0066cc;
+  }
+
+  #mensaje {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
   & label {
     font-size: 1.125rem;
     color: $gray-dark;
