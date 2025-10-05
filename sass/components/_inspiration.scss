@@ -1,0 +1,66 @@
+.inspiration div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Definir propiedades de las cards */
+
+.card {
+  & img {
+    border-radius: 1.25rem 1.25rem 0 0;
+
+    & :hover {
+      opacity: 0.8;
+    }
+  }
+
+  & .info {
+    display: flex;
+    padding: 1.25rem;
+    border-radius: 0 0 1.25rem 1.25rem;
+    background-color: $green-dark;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    & .txt {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      color: $white;
+
+      & h3 {
+        color: $green-light;
+        font-size: 1.563rem;
+        font-weight: 700;
+      }
+
+      & .date {
+        font-size: 0.875rem;
+        color: $white;
+      }
+
+      & p {
+        font-size: 1.125rem;
+        font-weight: 400;
+      }
+    }
+
+    & .button {
+      display: flex;
+      align-items: flex-end;
+    }
+
+  }
+}
+
+@media (max-width: $mediaMobile-480) {
+  .inspiration div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  .card h3{
+    font-size: 1rem;
+  }
+}
+}

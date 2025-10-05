@@ -1,0 +1,152 @@
+.notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.125rem;
+
+  & .card-w {
+    background: $gray;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    display: grid;
+    gap: 2rem;
+
+    /* Estilo adaptativo usando font-weight para que la tipografía se vea bold, además de letter-spacing para dar altura al texto */
+    /* Uso de display flex para organizar los textos de manera uniforme con gap */
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 0.7;
+      display: flex;
+      gap: 1rem;
+      letter-spacing: 4px;
+      padding-top: 15px;
+    }
+
+    /* Uso de de pseudo elementos, para poner contenido antes y despúes de un elemento */
+    &::after,
+    &::before {
+      content: "";
+      border-left: 3px solid $violet;
+      transform: skew(25deg);
+    }
+
+    & a.button {
+      @include button;
+    }
+
+    /* Para esta caja use grid template areas, un que se puede desarrollar de una manera
+  más sencilla la distribución de los elementos, quize utilizarla para practicar lo visto en clases */
+    grid-template-areas: "first first"
+    "second second"
+    "third fourth"
+    "fifth fifth";
+  }
+}
+
+.notes {
+  & h1 {
+    grid-area: first;
+  }
+
+  & .text-box {
+    grid-area: second;
+  }
+
+  & .box-w {
+    grid-area: third;
+  }
+
+  & .box-wh {
+    grid-area: fourth;
+  }
+
+  & .button {
+    grid-area: fifth;
+  }
+}
+
+.notes .box-w,
+.box-wh {
+  background: $green-dark;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+
+  .number,
+  p {
+    color: $green-light;
+  }
+
+  .number {
+    font-size: 2.813rem;
+    font-weight: 600;
+  }
+}
+
+/* Uso de de pseudo clase, para poner marcar clases en este caso un botón */
+.box-w,
+.box-wh:hover {
+  background: $violet;
+  cursor: pointer;
+}
+
+.notes .card .info {
+  align-items: center;
+  border: none;
+}
+
+.card {
+  & p {
+    color: $white;
+  }
+}
+
+/* Sección Información cajas*/
+.info-boxes {
+  display: flex;
+  gap: 3.125rem;
+
+  /* flex-grow, determinó que tanto debierón crecer las cajas*/
+  .box-notes {
+    flex-grow: 1;
+    background: $pink-light;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    & h2 {
+      font-weight: 700;
+    }
+
+    /* Uso de de pseudo elementos, para poner un simbolo y despúes de un elemento*/
+    & h2::after {
+      content: " ➥";
+    }
+  }
+
+  /* Uso de de pseudo clase nth-child, para poder aplicar estilos solamente al segundo hijo del
+  contenido de 3 cajas */
+  .box-notes:nth-child(2) {
+    background: $green-white;
+    justify-content: flex-end;
+  }
+
+  .button {
+    @include button;
+  }
+}
+
+@media (max-width: $mediaMobile-480) {
+  .notes{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .info-boxes {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .class-info {
+    display: none;
+  }
+}

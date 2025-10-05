@@ -1,0 +1,21 @@
+/*abstracts*/
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+/*base*/
+@import './base/base';
+@import './base/resets';
+
+/*layout*/
+@import './layout/header';
+@import './layout/footer';
+
+/*components*/
+@import './components/dashboard.scss';
+@import './components/inspiration.scss';
+@import './components/homeworks';
+/*----Sección Insperación Form----*/
+@import './components/inspire-form';
+/*----Sección Notas----*/
+@import './components/notes';
+

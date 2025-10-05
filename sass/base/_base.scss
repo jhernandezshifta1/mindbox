@@ -1,0 +1,40 @@
+/* body - Define variables globales del contenido visible */
+/* Fuente tipográfica Hind de Google Fonts */
+body {
+  font-family: "Hind", sans-serif !important;
+  display: block;
+  margin: 0 auto;
+}
+/* img - Define propiedade de las imágenes */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* formateo estilos de los textos */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+h3 {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+p {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
