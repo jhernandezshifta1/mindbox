@@ -1,7 +1,7 @@
 @mixin button {
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: pink;
+  background-color: $violet;
   color: $white;
   text-decoration: none;
   border-radius: 0.313rem;

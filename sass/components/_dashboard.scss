@@ -35,6 +35,16 @@ section h2 {
   }
 }
 
+#map {
+	height: 500px;
+	width: 100%;
+}
+
+.mapboxgl-canvas {
+  height: 500px !important;
+	width: 100% !important;
+}
+
 @media (max-width: $mediaMobile-480) {
   .dashboard div{
     display: grid;

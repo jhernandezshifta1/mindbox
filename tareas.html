@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tareas</title>
+  <link rel="stylesheet" href="sass/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <div class="menu content">
+      <a href="index.html" class="logo"><img src="images/logo-mind-box.svg" alt="Mindbox" /></a>
+
+      <nav class="main-menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="active" href="tareas.html">Tareas</a></li>
+          <li><a href="notas.html">Notas</a></li>
+          <li><a href="inspiracion.html">Inspiración</a></li>
+          <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+      </nav>
+
+      <nav class="settings">
+        <a href="#"><span class="material-symbols-outlined"> search </span></a>
+        <a href="#"><span class="material-symbols-outlined"> notifications </span></a>
+        <a href="#"><span class="material-symbols-outlined"> settings_heart </span></a>
+        <a href="#"><span class="material-symbols-outlined"> person </span></a>
+        <span class="user-img">
+          <img src="images/user.jpg" alt="user" />
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Carrusel -->
+    <div class="section content">
+      <h1>Tareas</h1>
+      <p>Que debo aprender para ser desarrollador</p>
+
+      <div class="swiper-car content">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image-container"></div>
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Fundamentos de programación</h4>
+                </div>
+                <div class="card-text">
+                  <p>Algoritmos y estructuras de datos.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image-container"></div>
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Lenguajes de programación</h4>
+                </div>
+                <div class="card-text">
+                  <p>HTML, CSS, JavaScript.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image-container"></div>
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Bases de datos</h4>
+                </div>
+                <div class="card-text">
+                  <p>SQL (MySQL, PostgreSQL) y NoSQL (MongoDB, Firebase)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image-container"></div>
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Control de versiones</h4>
+                </div>
+                <div class="card-text">
+                  <p>Git y GitHub/GitLab/Bitbucket para trabajo colaborativo.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image-container"></div>
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Desarrollo web</h4>
+                </div>
+                <div class="card-text">
+                  <p>Frameworks frontend (React, Vue, Angular).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="image-container"></div>
+              <div class="card-description">
+                <div class="card-title">
+                  <h4>Buenas prácticas</h4>
+                </div>
+                <div class="card-text">
+                  <p>Código limpio, comentado y estructurado.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--ETIQUETA FOOTER-->
+    <footer>
+      <span><strong>© 2025 Mindbox. </strong>Todos los derechos reservados</span>
+    </footer>
+  </main>
+  </main>
+
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper-slide.js"></script>
+  <script src="js/picsum.js"></script>
+</body>
+
+</html>

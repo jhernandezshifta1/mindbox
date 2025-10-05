@@ -5,11 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mindbox</title>
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="sass/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,7 +27,7 @@
         <!--LISTA MENU-->
         <ul>
           <li><a class="active" href="index.html">Inicio</a></li>
-          <li><a href="#">Tareas</a></li>
+          <li><a href="tareas.html">Tareas</a></li>
           <li><a href="notas.html">Notas</a></li>
           <li><a href="inspiracion.html">Inspiración</a></li>
           <li><a href="configuracion.html">Configuración</a></li>
@@ -57,25 +60,25 @@
         <article class="box">
           <h3>Tareas</h3>
           <p>Organiza tus tareas diarias con facilidad.</p>
-          <a class="button wobble" href="#">Ver Tareas</a>
+          <a class="button wobble" href="tareas.html">Ver Tareas</a>
         </article>
         <!--Contenido Caja-2-->
         <article class="box">
           <h3>Notas</h3>
           <p>Toma notas rápidas y accede a ellas en cualquier momento.</p>
-          <a class="button wobble" href="#">Ver Notas</a>
+          <a class="button wobble" href="notas.html">Ver Notas</a>
         </article>
         <!--Contenido Caja-3-->
         <article class="box">
           <h3>Inspiración</h3>
           <p>Encuentra inspieración para tus proyectos y tareas.</p>
-          <a class="button wobble" href="#">Ver Inspiración</a>
+          <a class="button wobble" href="inspiracion.html">Ver Inspiración</a>
         </article>
         <!--Contenido Caja-4-->
         <article class="box">
           <h3>Configuración</h3>
           <p>Personaliza la aplicación según tus preferencias.</p>
-          <a class="button wobble" href="#">Ver Configuración</a>
+          <a class="button wobble" href="configuracion.html">Ver Configuración</a>
         </article>
       </div>
     </section>
@@ -148,14 +151,24 @@
         </article>
       </div>
     </section>
+    <!--Mapa de Ubicación-->
+    <div>
+      <h2 class="content">Ubicación Mindbox</h2>
+      <div id="map"></div>
+    </div>
+
+
+
+
     <!--ETIQUETA FOOTER-->
     <footer>
       <span><strong>© 2025 Mindbox. </strong>Todos los derechos reservados</span>
     </footer>
   </main>
-  
 
-  <script src="js/bienvenida.js"></script>
+  <!-- JS de Mapbox (se carga antes de tu script) -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
+  <script src="/js/map.js"></script>
 
 </body>
 
