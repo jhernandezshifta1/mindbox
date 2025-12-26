@@ -1,0 +1,50 @@
+/* Inspiración Formulario */
+.inspiration-add {
+  width: 100%;
+  padding: 3.125rem;
+  background: $gray;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & button {
+    background-color: $violet;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: white;
+  }
+}
+
+.inspiration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & label {
+    font-size: 1.125rem;
+    color: $gray-dark;
+  }
+}
+
+input[type="text"],
+textarea {
+  border: 1px solid $gray-dark;
+  border-radius: 0.313rem;
+  padding: 0.625rem;
+  font-size: 1rem;
+  width: 100%;
+
+  & textarea {
+    height: 12.5rem;
+    resize: none;
+  }
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: $pink;
+}

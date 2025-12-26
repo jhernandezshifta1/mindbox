@@ -1,0 +1,24 @@
+/* Comodín que formatea estilos del sitio */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Propiedades content */
+.content {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  padding-top: 3.125rem;
+
+  @media (max-width: 480px) {
+    gap: 2rem;
+    padding: 1rem;
+  }
+}
